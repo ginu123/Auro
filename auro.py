@@ -2,8 +2,8 @@ from nltk.tokenize import PunktSentenceTokenizer
 import nltk
 from nltk.corpus import state_union
 
-filename = "./userinput.txt"
-filename1 = "./dictionary.txt"
+filename = "./Files/userinput.txt"
+filename1 = "./Files/dictionary.txt"
 user = input("Enter Data: ")
 
 with open (filename, "w") as fd:
@@ -29,9 +29,9 @@ def process_content():
 			words = nltk.word_tokenize(i)
 			tagged = nltk.pos_tag(words)
 			print(tagged)
-			with open("./tokenized.txt", "w") as fd, open(filename) as fd1, open("comp.txt") as fd2:
+			with open("./Files/tokenized.txt", "w") as fd, open(filename) as fd1, open("./Files/comp.txt") as fd2:
 				# myWords = set(line.split(',') for line in tagged)
-				with open("./newtokens.txt", "w") as f:
+				with open("./Files/newtokens.txt", "w") as f:
 					for line in tagged:
 						print(line)
 						freq1 = line[1]
